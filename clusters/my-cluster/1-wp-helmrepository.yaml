@@ -1,0 +1,11 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: artifactory
+  namespace: default
+spec:
+  interval: 1m
+  url: https://wordpresstask.jfrog.io/artifactory/api/helm/roland-helm-local
+  secretRef:
+    name: example-user
